@@ -1,0 +1,10 @@
+[Unit]
+Description=A DoH stub resolver
+Wants=graphical-session.target
+
+[Service]
+Type=exec
+ExecStart=doh-stub
+
+[Install]
+WantedBy=graphical-session.target
