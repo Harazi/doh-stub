@@ -61,7 +61,7 @@ func main() {
 		}
 		defer socket.Close()
 
-		socket.SetDeadline(time.Now().Add(time.Second * time.Duration(2)))
+		socket.SetDeadline(time.Now().Add(time.Second * time.Duration(5)))
 
 		wrote, err := socket.WriteToUDP(buf, &net.UDPAddr{IP: nameserverAddr, Port: nameserverPort})
 		if err != nil {
